@@ -1,3 +1,4 @@
+//https://rosettacode.org/wiki/K-d_tree#Scala
 object KDTree {
 
   // Task 1A. Build tree of KDNodes. Translated from Wikipedia.
