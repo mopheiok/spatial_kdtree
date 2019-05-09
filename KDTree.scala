@@ -1,5 +1,21 @@
+import org.apache.log4j.{Level, Logger}
+
 //https://rosettacode.org/wiki/K-d_tree#Scala
 object KDTree {
+
+  val logger: Logger = Logger.getLogger(getClass)
+
+  logger.setLevel(Level.INFO)
+
+  logger.isDebugEnabled
+
+  logger.getLevel == Level.INFO
+
+  // import org.slf4j.{Logger, LoggerFactory}
+
+  // val logger: Logger = LoggerFactory.getLogger(getClass.getName)
+
+  // logger.isDebugEnabled
 
   // Task 1A. Build tree of KDNodes. Translated from Wikipedia.
   def apply[T](points: Seq[Seq[T]], depth: Int = 0)(implicit num: Numeric[T]): Option[KDNode[T]] = {
